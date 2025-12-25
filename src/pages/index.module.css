@@ -1,13 +1,11 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
+/* style for the homepage */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+  color: white;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +18,298 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #8e2de2 0%, #4a00e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.authorCredit {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: 500;
+  color: #e0e0ff;
+}
+
+.robotImageContainer {
+  margin: 1.5rem auto;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.robotImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.spectrumCard {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0ff;
+}
+
+.spectrumCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mainStage {
+  border: 2px solid #4c5c96;
+  background-color: #f8f9ff;
+}
+
+.journeyCard {
+  height: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journeyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.levelBadge {
+  background: linear-gradient(45deg, #8e2de2 0%, #4a00e0 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.journeyDetails {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.journeyDetails div {
+  margin-bottom: 0.5rem;
+}
+
+.shiftCard {
+  height: 100%;
+}
+
+.shiftCard h3 {
+  font-size: 1.5rem;
+}
+
+.shiftCard ul {
+  padding-left: 1.5rem;
+}
+
+.shiftCard li {
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  position: relative;
+}
+
+.shiftCard li:before {
+  content: "• ";
+  font-size: 1.5rem;
+  position: absolute;
+  left: -1.2rem;
+  top: -0.2rem;
+}
+
+.pillarIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.stageIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.pillarLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.pillarLink:hover {
+  text-decoration: none;
+}
+
+.spectrumLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.spectrumLink:hover {
+  text-decoration: none;
+}
+
+.journeyLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.journeyLink:hover {
+  text-decoration: none;
+}
+
+.readMore {
+  color: #8e2de2;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 996px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .journeyCard {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .features .row {
+    flex-direction: column;
+  }
+
+  .journeyCard {
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .col--2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+/* ===== HERO IMAGE SIDE, FLOATING & AI GLOW ===== */
+
+/* Hero section grid layout */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; /* image LEFT, text RIGHT */
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Hero text container */
+.heroContent {
+  text-align: left;
+}
+
+/* Robot image container */
+.robotImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating animation */
+@keyframes floatRobot {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Robot image style with glow + animation */
+.robotImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  animation: floatRobot 4s ease-in-out infinite;
+
+  box-shadow:
+    0 0 25px rgba(138, 43, 226, 0.6),
+    0 0 60px rgba(74, 0, 224, 0.4);
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media screen and (max-width: 996px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .heroContent {
+    text-align: center;
+  }
+
+  .robotImageContainer {
+    margin-bottom: 2rem;
+  }
 }
